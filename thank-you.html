@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You — GR VertiQ Solution SARL</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="logo.png">
+<!-- Brand fonts from the GRVERTIQ brochure (Handel Gothic headings · Gotham body) -->
+<link rel="preload" href="fonts/HandelGothic.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="fonts/Gotham-Book.otf" as="font" type="font/otf" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script>document.documentElement.classList.add('js');</script>
+<link rel="stylesheet" href="styles.css">
+<style>
+.ty{min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:center;background:radial-gradient(1200px 700px at 50% 20%,#2A3F80 0%,var(--navy) 62%,#16244E 100%);padding:8rem 4vw 5rem;position:relative;overflow:hidden;}
+.ty::after{content:'';position:absolute;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(255,221,33,.13),transparent 65%);top:-260px;right:-180px;pointer-events:none;}
+.ty-card{position:relative;z-index:1;text-align:center;max-width:680px;animation:fadeUp 1s var(--ease) both;}
+.ty-ico{width:96px;height:96px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-2));color:var(--navy);display:flex;align-items:center;justify-content:center;font-size:2.4rem;margin:0 auto 2rem;box-shadow:0 0 0 14px rgba(255,221,33,.15),0 20px 50px rgba(255,221,33,.3);animation:floaty 4.5s ease-in-out infinite;}
+.ty h1{font-family:var(--serif);font-size:clamp(2.4rem,5vw,4rem);font-weight:500;color:var(--white);line-height:1.1;margin-bottom:1.1rem;}
+.ty h1 em{font-style:italic;color:var(--gold);}
+.ty p{color:rgba(255,255,255,.7);line-height:1.9;max-width:540px;margin:0 auto 1rem;}
+.ty .ty-sub{font-size:.86rem;color:rgba(255,255,255,.5);}
+.ty-badge{display:inline-flex;align-items:center;gap:9px;margin:1.4rem 0 2.4rem;background:rgba(255,221,33,.1);border:1px solid rgba(255,221,33,.35);border-radius:50px;padding:8px 20px;font-size:.7rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);}
+.ty-badge .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);animation:blink 2.2s infinite;}
+.ty-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+</style>
+</head>
+<body>
+
+<!-- NAV (same as main page) -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo"><img src="logo.png" alt="GR VertiQ Solution SARL"></a>
+  <ul class="nav-links">
+    <li><a href="index.html#home"><span class="en-only">Home</span><span class="fr-only">Accueil</span></a></li>
+    <li><a href="index.html#about"><span class="en-only">About Us</span><span class="fr-only">À Propos</span></a></li>
+    <li><a href="index.html#products"><span class="en-only">Products</span><span class="fr-only">Produits</span></a></li>
+    <li><a href="index.html#location"><span class="en-only">Coverage</span><span class="fr-only">Couverture</span></a></li>
+    <li><a href="index.html#contact"><span class="en-only">Contact</span><span class="fr-only">Contact</span></a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-pill">
+      <button class="lang-btn on" id="btnEN" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" id="btnFR" onclick="setLang('fr')">FR</button>
+    </div>
+    <a href="index.html#contact" class="nav-cta"><span class="en-only">Get a Quote</span><span class="fr-only">Devis</span> <i class="fas fa-arrow-right" style="font-size:.7rem;"></i></a>
+    <button class="hamburger" id="ham" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU (same as main page) -->
+<div class="mobile-menu" id="mmenu">
+  <img src="logo.png" alt="GR VertiQ" class="mlogo">
+  <button class="mclose" onclick="toggleNav()" aria-label="Close menu"><i class="fas fa-xmark"></i></button>
+  <a href="index.html#home"><span class="mnum">01</span><span class="en-only">Home</span><span class="fr-only">Accueil</span></a>
+  <a href="index.html#about"><span class="mnum">02</span><span class="en-only">About Us</span><span class="fr-only">À Propos</span></a>
+  <a href="index.html#products"><span class="mnum">03</span><span class="en-only">Products</span><span class="fr-only">Produits</span></a>
+  <a href="index.html#location"><span class="mnum">04</span><span class="en-only">Coverage</span><span class="fr-only">Couverture</span></a>
+  <a href="index.html#contact"><span class="mnum">05</span><span class="en-only">Contact</span><span class="fr-only">Contact</span></a>
+</div>
+
+<!-- THANK YOU -->
+<section class="ty">
+  <div class="ty-card">
+    <div class="ty-ico"><i class="fas fa-check"></i></div>
+    <h1><span class="en-only">Thank You — <em>Message Received</em></span><span class="fr-only">Merci — <em>Message Reçu</em></span></h1>
+    <p><span class="en-only">Your enquiry has been delivered to our team at GR VertiQ. One of our specialists will get back to you at the email address you provided.</span><span class="fr-only">Votre demande a bien été transmise à l'équipe GR VertiQ. Un de nos spécialistes vous répondra à l'adresse email indiquée.</span></p>
+    <div class="ty-btns">
+      <a href="index.html" class="btn btn-gold"><i class="fas fa-house"></i> <span class="en-only">Back to Home</span><span class="fr-only">Retour à l'Accueil</span></a>
+      <a href="index.html#products" class="btn btn-ghost"><span class="en-only">Explore Products</span><span class="fr-only">Voir Nos Produits</span> <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER (same as main page) -->
+<footer>
+  <div class="fwrap">
+    <a href="index.html" class="f-logo"><img src="logo.png" alt="GR VertiQ Solution SARL"></a>
+    <p class="f-copy">© <span id="year">2026</span> GR VertiQ Solution SARL. <span class="en-only">All rights reserved.</span><span class="fr-only">Tous droits réservés.</span> · <a href="privacy-policy.html" class="f-privacy"><span class="en-only">Privacy Policy</span><span class="fr-only">Politique de Confidentialité</span></a></p>
+    <p class="f-credit"><span class="en-only">Made with</span><span class="fr-only">Réalisé avec</span> <i class="fas fa-heart"></i> <span class="en-only">by</span><span class="fr-only">par</span> <a href="https://www.ampli5.digital/" target="_blank" rel="noopener">Ampli5 Digital</a></p>
+  </div>
+</footer>
+
+<a href="https://wa.me/221711200277" class="wa-float" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+<script>
+/* language toggle — same behaviour + storage key as the main page */
+function setLang(l) {
+  document.body.classList.toggle('fr', l === 'fr');
+  document.documentElement.lang = l;
+  document.getElementById('btnEN').classList.toggle('on', l === 'en');
+  document.getElementById('btnFR').classList.toggle('on', l === 'fr');
+  try { localStorage.setItem('grv-lang', l); } catch (e) {}
+}
+try { if (localStorage.getItem('grv-lang') === 'fr') setLang('fr'); } catch (e) {}
+
+/* mobile menu */
+const mmenu = document.getElementById('mmenu');
+const ham = document.getElementById('ham');
+function toggleNav() {
+  const open = mmenu.classList.toggle('open');
+  ham.classList.toggle('x', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+
+/* nav scroll state + year */
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
+}, { passive: true });
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

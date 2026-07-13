@@ -1,0 +1,12 @@
+# GR VertiQ Solution SARL — robots.txt
+# Update the domain below if the live site is not https://www.grvertiq.com/
+
+User-agent: *
+Allow: /
+Disallow: /send-mail.php
+Disallow: /download-lead.php
+Disallow: /phpmailer/
+Disallow: /pdf/
+Disallow: /thank-you.html
+
+Sitemap: https://www.grvertiq.com/sitemap.xml
